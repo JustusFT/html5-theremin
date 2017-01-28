@@ -1,0 +1,26 @@
+.ui-slider-handle {
+    background-color: #FFF;
+    border-radius: 4px;
+}
+
+.ui-slider {
+    background-color: #444;
+}
+
+.ui-slider-range {
+    background-color: #5897FB;
+}
+
+.ui-checkboxradio-label {
+    margin: 0;
+    padding: 0.5em;
+    background-color: #444;
+}
+
+.ui-checkboxradio-checked {
+    background-color: #5897FB;
+}
+
+.ui-state-active {
+    background-color: #5897FB;
+}

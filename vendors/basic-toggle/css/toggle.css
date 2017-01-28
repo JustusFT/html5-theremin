@@ -1,0 +1,55 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 24, 2017, 1:15:29 PM
+    Author     : justus
+*/
+/*
+HOW TO USE:
+<label class="switch">
+    <input type="checkbox" />
+    <div class="slider"></div>
+</label>
+*/
+.switch {
+  width: 64px;
+  height: 24px;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  /*box-sizing: content-box; //bootstrap fix*/
+  border: 2px solid #444;
+  border-radius: 16px;
+  background-color: #444;
+  vertical-align: middle; }
+
+.switch input[type=checkbox] {
+  display: none; }
+  .switch input[type=checkbox]:checked + .switch-toggle::before {
+    left: -12px; }
+  .switch input[type=checkbox]:checked + .switch-toggle::after {
+    left: 40px; }
+
+.switch-toggle::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 0;
+  transition: left 0.25s;
+  border-radius: 12px;
+  background-color: #FFFFFF; }
+
+.switch-toggle::before {
+  content: "";
+  width: 64px;
+  height: 24px;
+  position: absolute;
+  left: -52px;
+  transition: left 0.25s;
+  background-color: #5897FB; }
+
+/*# sourceMappingURL=toggle.css.map */

@@ -1,0 +1,69 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 24, 2017, 1:15:29 PM
+    Author     : justus
+*/
+/*
+HOW TO USE:
+<label class="switch">
+    <input type="checkbox" />
+    <div class="slider"></div>
+</label>
+*/
+$width: 64px;
+$height: 24px;
+$border-thickness: 2px;
+$transition-time: 0.25s;
+$border-color: #444;
+$checked-color: #5897FB;
+$circle-color: #FFFFFF;
+
+.switch {
+    width: $width;
+    height: $height;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    /*box-sizing: content-box; //bootstrap fix*/
+    border: $border-thickness solid $border-color;
+    border-radius: $height / 2 + $border-thickness * 2;
+    background-color: $border-color;
+    vertical-align: middle;
+}
+
+.switch input[type=checkbox] {
+    display:none;
+    &:checked {
+        + .switch-toggle::before {
+            left: $height / 2 * -1;
+        }
+        + .switch-toggle::after {
+            left: $width - $height;
+        }
+    }
+}
+
+.switch-toggle::after {
+    content: "";
+    width: $height;
+    height: $height;
+    position: absolute;
+    left: 0;
+    transition: left $transition-time;
+    border-radius: $height / 2;
+    background-color: $circle-color;
+}
+
+.switch-toggle::before {
+    content: "";
+    width: $width;
+    height: $height;
+    position: absolute;
+    left: $width * -1 + $height / 2;
+    transition: left $transition-time;
+    background-color: $checked-color;
+}
